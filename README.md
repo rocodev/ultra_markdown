@@ -19,6 +19,14 @@ Or install it yourself as:
 ## Usage
 
 
+`"string".to_markdown`
+
+### Support
+
+* gist tag
+* OctoPress code block
+* MathJax
+
 ### CSS
 
 ```
