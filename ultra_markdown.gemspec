@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["tonilin@gmail.com", "xuite.joke@gmail.com"]
   spec.description   = %q{Markdown Parser for various purposes}
   spec.summary       = %q{Markdown Parser for various purposes}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/rocodev/ultra_markdown"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
