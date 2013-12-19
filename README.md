@@ -27,6 +27,10 @@ Or install it yourself as:
 * OctoPress code block
 * MathJax
 
+### Demo
+
+Extract from [Logdown](http://logdown.com) , a Markdown Blogging Platform, see demo : <http://logdown.com/demo>
+
 ### CSS
 
 ```
