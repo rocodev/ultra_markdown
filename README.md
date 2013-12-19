@@ -18,7 +18,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO
+
+### CSS
+
+```
+//= require solarized
+```
 
 ## Contributing
 
