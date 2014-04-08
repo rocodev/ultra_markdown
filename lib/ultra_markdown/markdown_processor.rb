@@ -66,7 +66,7 @@ module Redcarpet
       end
 
       # Topic 裡面，所有的 head 改為 h2 顯示
-      def header(text, header_level)
+      def header(text, header_level, anchor = nil)
         header_level += 1
         "<h#{header_level}>#{text}</h#{header_level}>"
       end
