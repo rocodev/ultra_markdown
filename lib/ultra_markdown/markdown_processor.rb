@@ -3,11 +3,15 @@ require 'rails'
 require 'rails_autolink'
 require 'redcarpet'
 require 'singleton'
+require 'rouge'
+require 'rouge/plugins/redcarpet'
 
 
 module Redcarpet
   module Render
     class HTMLwithSyntaxHighlight < HTML
+      
+      include Rouge::Plugins::Redcarpet
 
       def initialize(extensions={})
         @syntax_converter = UltraMarkdown::SyntaxConverter.new({:is_rss => is_rss})

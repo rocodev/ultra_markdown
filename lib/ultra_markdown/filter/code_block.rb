@@ -95,14 +95,19 @@ module UltraMarkdown
         end
       end
     
-    
-    
       def block_code(code, language)
-        Pygments.highlight(code, :lexer => language)
-      rescue => e
-        return Pygments.highlight(code, :lexer => nil)
+        if lexer = Rouge::Lexer.find( language)
+          formatter = ::Rouge::Formatters::HTML.new()
+           formatter.format(lexer.lex(code))
+        else
+          render_plain(code)
+        end
       end
     
+      def render_plain(code)
+        code.gsub('<','&lt;') 
+      end
+
       def codespan(code)
         return "" if !code
     

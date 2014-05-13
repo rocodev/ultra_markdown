@@ -19,7 +19,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency 'nokogiri'
-  spec.add_dependency 'pygments.rb'
+
+
+  spec.add_dependency 'rouge'
   spec.add_dependency 'redcarpet'
   spec.add_dependency 'airbrake'
   spec.add_dependency 'rails_autolink'
