@@ -6,7 +6,9 @@ Markdown Parser for various purposes
 
 Add this line to your application's Gemfile:
 
+    gem 'rogue', :github => "logdown/rouge", :branch => "wrapper_tag"
     gem 'ultra_markdown'
+
 
 And then execute:
 

@@ -96,16 +96,19 @@ module UltraMarkdown
       end
     
       def block_code(code, language)
-        if lexer = Rouge::Lexer.find( language)
-          formatter = ::Rouge::Formatters::HTML.new()
-           formatter.format(lexer.lex(code))
+        lexer = Rouge::Lexer.find(language)
+        if lexer
+          formatter = ::Rouge::Formatters::HTML.new(:wrap => true, :css_class => 'highlight', :wrapper_tag => "div" )
+          formatter.format(lexer.lex(code))
         else
           render_plain(code)
         end
       end
     
       def render_plain(code)
-        code.gsub('<','&lt;') 
+        lexer = Rouge::Lexer.find("text")
+         formatter = ::Rouge::Formatters::HTML.new(:wrap => true, :css_class => 'highlight', :wrapper_tag => "div" )
+        formatter.format(lexer.lex(code))
       end
 
       def codespan(code)
