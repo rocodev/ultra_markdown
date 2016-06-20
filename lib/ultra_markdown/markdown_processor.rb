@@ -49,8 +49,7 @@ module Redcarpet
       end
 
       def image(link, title, alt_text)
-
-        '<figure><img src="#{link}" title="#{title}" /></figure>'
+        "<figure><img src=\"#{link}\" title=\"#{title}\" /></figure>"
       end
 
 
