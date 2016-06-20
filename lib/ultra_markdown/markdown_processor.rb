@@ -48,6 +48,11 @@ module Redcarpet
         @syntax_converter.codespan(code)
       end
 
+      def image(link, title, alt_text)
+
+        '<figure><img src="#{link}" title="#{title}" /></figure>'
+      end
+
 
       def autolink(link, link_type)
         # return link
